@@ -26,3 +26,8 @@ data "aws_service" "home_region_validation" {
 
 data "aws_partition" "current" {
 }
+
+
+data "aws_secretsmanager_secret_version" "aft_accounts" {
+  secret_id = "aws_ct_project/accounts_id"
+}

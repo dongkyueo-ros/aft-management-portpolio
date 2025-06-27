@@ -4,6 +4,7 @@
 locals {
   aft_version                                      = chomp(trimspace(data.local_file.version.content))
   aft_framework_repo_git_ref                       = var.aft_framework_repo_git_ref == null || var.aft_framework_repo_git_ref == "" ? local.aft_version : var.aft_framework_repo_git_ref
+  #aft_accounts                                     = jsondecode(data.aws_secretsmanager_secret_version.aft_accounts.secret_string)
   aft_account_provisioning_customizations_sfn_name = "aft-account-provisioning-customizations"
   aft_account_provisioning_framework_sfn_name      = "aft-account-provisioning-framework"
   trigger_customizations_sfn_name                  = "aft-invoke-customizations"

@@ -4,6 +4,8 @@
 #########################################
 # Control Tower Core Account Parameters
 #########################################
+# Control Tower 에서 사용하는 계정 정보
+
 variable "ct_management_account_id" {
   description = "Control Tower Management Account Id"
   type        = string
@@ -32,10 +34,11 @@ variable "audit_account_id" {
 #########################################
 # General AFT Vars
 #########################################
+# repository 나 branch 정보 등 지정
 
 variable "aft_framework_repo_url" {
   description = "Git repo URL where the AFT framework should be sourced from"
-  default     = "https://github.com/aws-ia/terraform-aws-control_tower_account_factory.git"
+  #default     =  "https://github.com/aws-ia/terraform-aws-control_tower_account_factory.git"
   type        = string
   validation {
     condition     = length(var.aft_framework_repo_url) > 0
@@ -158,7 +161,7 @@ variable "tags" {
 #########################################
 # AFT Feature Flags
 #########################################
-# detult VPC 삭제 정책이 필요한 경우, 기존 Contorl Tower 에서는 Lambda 를 이용해 Script 를 고객이 직접 구동해야 했습니다.
+# detult VPC 삭제 정책이 필요한 경우, 기존 Contorl Tower 에서는 Lambda 를 이용해 Script 를 고객이 직접 구동해야 했으나,
 # ATF 에서는 flag 만 enable 하면 됩니다. 현재는 3개의 Feature 가 있지만 추후 필요시 추가하여 사용하면 됩니다.
 
 variable "aft_feature_cloudtrail_data_events" {
