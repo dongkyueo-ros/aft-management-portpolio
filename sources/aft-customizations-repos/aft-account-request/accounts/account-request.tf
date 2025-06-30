@@ -16,10 +16,8 @@ module "account-request" {
     ImportAccount             = each.value.import
   }
 
-  account_customizations_name = each.value.customization
-
   account_tags = {
-    "ABC:Environment" = each.value.name == "prod-account" ? "Prod" : "Dev"
+    "ABC:Environment" = each.value.environment
     "ABC:Owner"       = each.value.email
     "ABC:Division"    = each.value.division
     "ABC:CostCenter"  = each.value.cost_center
@@ -33,6 +31,8 @@ module "account-request" {
     change_requested_by = each.value.change_requested_by
     change_reason       = each.value.change_reason
   }
+
+  account_customizations_name = each.value.customization
 }
 
 

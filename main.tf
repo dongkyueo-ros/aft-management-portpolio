@@ -241,10 +241,10 @@ module "aft_ssm_parameters" {
   aft_execution_role_name                                     = local.aft_execution_role_name
   aft_session_name                                            = local.aft_session_name
   aft_version                                                 = local.aft_version
-  ct_management_account_id                                    = var.ct_management_account_id
-  ct_audit_account_id                                         = var.audit_account_id
-  ct_log_archive_account_id                                   = var.log_archive_account_id
-  aft_management_account_id                                   = var.aft_management_account_id
+  ct_management_account_id                                    = local.aft_accounts.ct_management_account_id
+  ct_audit_account_id                                         = local.aft_accounts.audit_account_id
+  ct_log_archive_account_id                                   = local.aft_accounts.log_archive_account_id
+  aft_management_account_id                                   = local.aft_accounts.aft_management_account_id
   ct_primary_region                                           = var.ct_home_region
   tf_version                                                  = var.terraform_version
   tf_distribution                                             = var.terraform_distribution
