@@ -306,7 +306,7 @@ variable "account_provisioning_customizations_repo_branch" {
 variable "terraform_version" {
   description = "Terraform version being used for AFT"
   type        = string
-  default     = "1.6.0"
+  #default     = "1.6.0"
   validation {
     condition     = can(regex("\\bv?\\d+(\\.\\d+)+[\\-\\w]*\\b", var.terraform_version))
     error_message = "Invalid value for var: terraform_version."
