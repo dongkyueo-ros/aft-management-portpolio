@@ -4,6 +4,10 @@
 
 locals {
   accounts = [
+
+    #############################################
+    # 사내 계정
+    #############################################
     {
       # Account Request
       name                = "prod-account"
@@ -12,10 +16,10 @@ locals {
       first_name          = "Prod"
       last_name           = "User"
       import              = false
-      customization       = "prod-custom"
+      customization       = "internal-core"
 
       # Account Customizations Audit
-      change_requested_by = "dongkyu9303@gmail.com"
+      change_requested_by = "test1@gmail.com"
       change_reason       = "AFT account onboarding"
 
       # Account Tags
@@ -27,6 +31,10 @@ locals {
       bu_code             = "BU001"
       project             = "AFT-TEST-PROJECT"
     },
+
+    #############################################
+    # 고객사 공통 계정정
+    #############################################
     {
       # Account Request
       name                = "dev-account"
@@ -35,13 +43,14 @@ locals {
       first_name          = "Dev"
       last_name           = "User"
       import              = false
-      customization       = "dev-custom"
+      customization       = "customer-core"
 
       # Account Customizations Audit
-      change_requested_by = "kim@cloocus.com"
+      change_requested_by = "test2@gmail.com"
       change_reason       = "AFT account onboarding"
 
       # Account Tags
+      environment         = "Dev"
       division            = "ENT"
       cost_center         = "1002"
       vended              = "true"

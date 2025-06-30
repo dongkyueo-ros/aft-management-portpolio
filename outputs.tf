@@ -6,15 +6,15 @@
 #########################################
 
 output "ct_management_account_id" {
-  value = var.ct_management_account_id
+  value = local.aft_accounts.ct_management_account_id
 }
 
 output "log_archive_account_id" {
-  value = var.log_archive_account_id
+  value = local.aft_accounts.log_archive_account_id
 }
 
 output "audit_account_id" {
-  value = var.audit_account_id
+  value = local.aft_accounts.audit_account_id
 }
 
 #########################################

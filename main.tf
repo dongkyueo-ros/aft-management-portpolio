@@ -159,7 +159,7 @@ module "aft_feature_options" {
   aft_failure_sns_topic_arn                 = module.aft_account_request_framework.failure_sns_topic_arn
   aft_vpc_private_subnets                   = module.aft_account_request_framework.aft_vpc_private_subnets
   aft_vpc_default_sg                        = module.aft_account_request_framework.aft_vpc_default_sg
-  log_archive_account_id                    = var.log_archive_account_id
+  log_archive_account_id                    = local.aft_accounts.log_archive_account_id
   cloudwatch_log_group_retention            = var.cloudwatch_log_group_retention
   feature_options_archive_path              = module.packaging.feature_options_archive_path
   feature_options_archive_hash              = module.packaging.feature_options_archive_hash

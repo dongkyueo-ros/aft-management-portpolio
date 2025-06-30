@@ -6,30 +6,30 @@
 #########################################
 # Control Tower 에서 사용하는 계정 정보
 
-variable "ct_management_account_id" {
-  description = "Control Tower Management Account Id"
-  type        = string
-  validation {
-    condition     = can(regex("^\\d{12}$", var.ct_management_account_id))
-    error_message = "Variable var: ct_management_account_id is not valid."
-  }
-}
-variable "log_archive_account_id" {
-  description = "Log Archive Account Id"
-  type        = string
-  validation {
-    condition     = can(regex("^\\d{12}$", var.log_archive_account_id))
-    error_message = "Variable var: log_archive_account_id is not valid."
-  }
-}
-variable "audit_account_id" {
-  description = "Audit Account Id"
-  type        = string
-  validation {
-    condition     = can(regex("^\\d{12}$", var.audit_account_id))
-    error_message = "Variable var: audit_account_id is not valid."
-  }
-}
+# variable "ct_management_account_id" {
+#   description = "Control Tower Management Account Id"
+#   type        = string
+#   validation {
+#     condition     = can(regex("^\\d{12}$", var.ct_management_account_id))
+#     error_message = "Variable var: ct_management_account_id is not valid."
+#   }
+# }
+# variable "log_archive_account_id" {
+#   description = "Log Archive Account Id"
+#   type        = string
+#   validation {
+#     condition     = can(regex("^\\d{12}$", var.log_archive_account_id))
+#     error_message = "Variable var: log_archive_account_id is not valid."
+#   }
+# }
+# variable "audit_account_id" {
+#   description = "Audit Account Id"
+#   type        = string
+#   validation {
+#     condition     = can(regex("^\\d{12}$", var.audit_account_id))
+#     error_message = "Variable var: audit_account_id is not valid."
+#   }
+# }
 
 #########################################
 # General AFT Vars
