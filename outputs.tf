@@ -7,14 +7,17 @@
 
 output "ct_management_account_id" {
   value = local.aft_accounts.ct_management_account_id
+  sensitive = true
 }
 
 output "log_archive_account_id" {
   value = local.aft_accounts.log_archive_account_id
+  sensitive = true
 }
 
 output "audit_account_id" {
   value = local.aft_accounts.audit_account_id
+  sensitive = true
 }
 
 #########################################
@@ -23,6 +26,7 @@ output "audit_account_id" {
 
 output "aft_management_account_id" {
   value = var.aft_management_account_id
+  sensitive = true
 }
 
 output "ct_home_region" {
