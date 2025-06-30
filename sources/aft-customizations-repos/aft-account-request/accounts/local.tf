@@ -10,8 +10,8 @@ locals {
     #############################################
     {
       # Account Request
-      name                = "prod-account"
-      email               = "prod@example.com"
+      name                = "company-account"
+      email               = "dklee-test1@gmail.com"
       ou                  = "Production"
       first_name          = "Prod"
       last_name           = "User"
@@ -19,7 +19,7 @@ locals {
       customization       = "internal-core"
 
       # Account Customizations Audit
-      change_requested_by = "test1@gmail.com"
+      change_requested_by = "dongkyu9303@gmail.com"
       change_reason       = "AFT account onboarding"
 
       # Account Tags
@@ -37,8 +37,8 @@ locals {
     #############################################
     {
       # Account Request
-      name                = "dev-account"
-      email               = "dev@example.com"
+      name                = "customer-account"
+      email               = "dklee-test2@gmail.com"
       ou                  = "Development"
       first_name          = "Dev"
       last_name           = "User"
@@ -46,7 +46,7 @@ locals {
       customization       = "customer-core"
 
       # Account Customizations Audit
-      change_requested_by = "test2@gmail.com"
+      change_requested_by = "dongkyu9303@gmail.com"
       change_reason       = "AFT account onboarding"
 
       # Account Tags
